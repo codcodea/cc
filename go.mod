@@ -6,6 +6,7 @@ require (
 	github.com/kyroy/kdtree v0.0.0-20200419114247-70830f883f1d
 	github.com/labstack/echo/v4 v4.11.1
 	github.com/lucasb-eyer/go-colorful v1.2.0
+	golang.org/x/net v0.12.0
 )
 
 require (
@@ -17,7 +18,6 @@ require (
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasttemplate v1.2.2 // indirect
 	golang.org/x/crypto v0.11.0 // indirect
-	golang.org/x/net v0.12.0 // indirect
 	golang.org/x/sys v0.10.0 // indirect
 	golang.org/x/text v0.11.0 // indirect
 	golang.org/x/time v0.3.0 // indirect
