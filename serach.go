@@ -10,7 +10,7 @@ import (
 	"github.com/lucasb-eyer/go-colorful"
 )
 
-// serch.go holds the logic for searching and retrieving colors from the KD trees
+// search.go holds the logic for searching and retrieving colors from the KD trees
 
 // AddNames finds the nearest 5 colors in the name tree and adds them to the response.
 // - ref: the reference point (user input)
@@ -155,15 +155,11 @@ func ColorLookUp(query string, session *FormSession) {
 		session.LastResult = []ColorfulJson{}
 
 		for _, c := range Names {
-
 			match := true
-
 			for _, w := range words {
-
 				if w == "" {
 					continue
 				}
-
 				if !strings.Contains(c.Name, w) {
 					match = false
 					break
@@ -171,8 +167,6 @@ func ColorLookUp(query string, session *FormSession) {
 			}
 
 			if match {
-
-				//session.LastResult.Names[c.Name] = c.Color.Hex()
 				colorFul := ColorfulJson{c.Name, c.Color.Hex()}
 				session.LastResult = append(session.LastResult, colorFul)
 			}
@@ -181,15 +175,12 @@ func ColorLookUp(query string, session *FormSession) {
 		fmt.Println("!isExtended", len(session.LastResult))
 
 	} else {
-
 		// Filter the previous result
 		filteredResult := []ColorfulJson{}
 
 		for _, v := range session.LastResult {
 			match := true
-
 			for _, w := range words {
-
 				if w == "" {
 					continue
 				}
