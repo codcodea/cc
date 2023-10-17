@@ -25,7 +25,7 @@ import (
 // Challenges, motivations, and solutions:
 // - Each color is interpolated in LAB among 50,000 color records expressed in the LAB color space (resulting in 300,000 rows of data).
 // - Then, each color is reiterated 5 times, resulting in a total of 1,500,000 iterations.
-// - By utilizing Golang and KD trees, the search and retrieval are performed in microseconds, in contrast to the current Node Express implementation which takes 200ms+.
+// - By utilizing Golang and KD trees, the search and retrieval are performed in ~1ms, in contrast to the current Node Express implementation which takes 200ms+.
 
 // Main is the entry point of the application.
 func main() {

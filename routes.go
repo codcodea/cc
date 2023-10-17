@@ -13,7 +13,7 @@ import (
 
 // HandleRoot GET /
 func HandleRoot(c echo.Context) error {
-	return c.String(http.StatusOK, "Color API is live and kicking!")
+	return c.String(http.StatusOK, "Color backend API is live!\nTry /colors/<hex> without '#', e.g /colors/ff0000")
 }
 
 // HandleColor GET /colors/:hex
